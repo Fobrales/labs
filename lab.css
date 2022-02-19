@@ -1,0 +1,41 @@
+body {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 120%;
+    background-color: black;
+    margin: 0;
+}
+
+.lab {
+    background-color: #1b1b1b;
+}
+
+.lab__header {
+    padding: 0.5rem 2rem;
+    background-color: #efefef;
+    color: #e91e63;
+}
+
+.lab__links {
+    padding: 0.5rem 2rem;
+}
+
+a {
+    color: #e91e63;
+    border: 1px solid #e91e63;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    margin: 2px 0px;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #efefef;
+    background-color: #e91e63;
+    border: 1px solid #b0003a;
+}
+
+.inProcess a {
+    filter: grayscale(100%)
+}
