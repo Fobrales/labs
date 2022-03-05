@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Чекинатор 05.03.22 Мохнатова Анна</title><meta charset="utf-8">
+ </head>
+ <body>
+
+     <script>
+         function calc() {
+              /* извлечение данных */  
+              const a1 = Number(document.querySelector('#n1').value);
+              const b1 = Number(document.querySelector('#n2').value); 
+              const c1 = Number(document.querySelector('#n3').value);
+              const a2 = Number(document.querySelector('#n4').value);
+              const b2 = Number(document.querySelector('#n5').value);
+              const c2 = Number(document.querySelector('#n6').value); 
+              /* вычисления  */
+              const mainDet = a1 * b2 - a2 * b1;
+              if (mainDet) { /* если главный определитель равен нулю, система не может решаться методом Крамера*/
+                const xDet = c1 * b2 - c2 * b1;
+                const yDet = c2 * a1 - c1 * a2;
+                const x = xDet / mainDet;
+                const y = yDet / mainDet;
+                /* запись результата */
+                document.querySelector('#result1').value = x;
+                document.querySelector('#result2').value = y;
+              }
+         }
+     </script>
+ 
+    <h4>amokhnatova</h4>
+    <input type="number" value = "506" id="n1"> x<sub>1</sub> + 
+    <input type="number" value = "66" id="n2"> x<sub>2</sub> =
+    <input type="number" value = "2315.1" id="n3"><hr>
+    <input type="number" value = "66" id="n4"> x<sub>1</sub> +
+    <input type="number" value = "11" id="n5"> x<sub>2</sub> =
+    <input type="number" value = "392.3" id="n6"><hr>
+    <input type="number" value = "" id="result1">
+    <input type="number" value = "" id="result2">
+    <button id="bt" onclick="calc()">Выполнить задание</button>
+ 
+ </body>
+</html>
